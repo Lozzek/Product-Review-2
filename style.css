@@ -1,0 +1,195 @@
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*, *::before, *::after {
+    box-sizing: border-box;
+  }
+  /*
+    2. Remove default margin
+  */
+  * {
+    margin: 0;
+  }
+  /*
+    3. Allow percentage-based heights in the application
+  */
+  html, body {
+    height: 100%;
+  }
+  /*
+    Typographic tweaks!
+    4. Add accessible line-height
+    5. Improve text rendering
+  */
+  body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    font-size: 16px;
+
+    display: grid;
+    place-content: center;
+    min-height: 100vh;
+    background: hsl(30, 38%, 92%);
+  }
+  /*
+    6. Improve media defaults
+  */
+  img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+  }
+  /*
+    7. Remove built-in form typography styles
+  */
+  input, button, textarea, select {
+    font: inherit;
+  }
+  /*
+    8. Avoid text overflows
+  */
+  p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+  }
+  /*
+    9. Create a root stacking context
+  */
+  #root, #__next {
+    isolation: isolate;
+  }
+
+  main {
+    background-color: white;
+    margin: 0px 1rem;
+    border-radius: .6rem;
+
+    text-align: left;
+    max-width: 23rem;
+  }
+
+  .desktop-img {
+    display: none;
+  }
+
+
+  .main-img {
+    border-top-left-radius: .6rem;
+    border-top-right-radius: .6rem;
+  }
+
+  .product {
+    padding: 1.4rem 1rem 0px 1.2rem;
+
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    font-size: .7rem;
+    text-transform: uppercase;
+    letter-spacing: .3rem;
+    opacity: .8;
+  }
+
+  .title {
+    display: grid;
+    padding: .8rem 1.6rem 0px 1rem;
+    line-height: 1;
+
+    font-family: "Fraunces", sans-serif;
+  }
+
+  .info {
+    padding: 1rem 1.4rem 0px 1.2rem;
+
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    font-size: .9rem;
+
+    opacity: .8;
+  }
+
+  .prices {
+    display: inline-flex;
+    padding: 1rem 0px 0px 1.2rem;
+  }
+
+  .new-price {
+    font-family: "Fraunces", sans-serif;
+    font-size: 2rem;
+    
+    color: hsl(158, 36%, 37%);
+  }
+
+  .old-price {
+    padding: .9rem 0px 0px 1.2rem;
+
+    font-family: "Montserrat";
+    font-size: .8rem;
+    text-decoration: line-through;
+    opacity: .7;
+  }
+
+  .btn {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+   
+    padding: .4rem;
+    margin: .6rem 1.6rem 1.4rem;
+    background-color: hsl(158, 36%, 37%);
+    border-radius: .5rem;
+  }
+
+  .shopping-cart {
+    width: 16px;
+    height: 16px;
+
+    margin: .5rem .8rem 0px 0px;
+  }
+
+  .text {
+    color: white;
+    text-decoration: none;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+    font-size: .9rem;
+
+    margin: .4rem 0px;
+  }
+
+  .btn:hover {
+    cursor: pointer;
+  }
+
+  .btn:active {
+    background-color: hsl(158, 36%, 17%);
+  }
+
+  @media screen and (min-width: 600px) {
+    main {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+
+        max-width: 36em;
+    }
+
+    .main-img {
+        display: none;
+    }
+
+    .desktop-img {
+        display: block;
+
+        border-top-left-radius: .5em;
+        border-bottom-left-radius: .5em;
+        border-top-right-radius: 0px;
+    }
+
+    .content {
+        margin-top: .6em;
+        margin-left: .5em;
+    }
+
+    .btn {
+        margin-top: 1.5em;
+    }
+
+
+  }
